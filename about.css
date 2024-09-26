@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(12,36,49);
+    color:#ffffcc;
+
+    .poppins-thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      
+      .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+    }
+    /* .content{
+        display: flex;
+        justify-content: center;
+    } */
+     .me{
+        display: flex;
+        justify-content: center; /* Horizontally centers the content */
+        align-items: center;     /* Vertically centers the content */
+        height: 10vh;           /* Takes full viewport height */
+        text-align: center;      /* Centers text within the container */
+        padding: 10px;
+      
+     }
+     .about-content{
+        font-size: 1rem;
+        margin-top: 0;
+        display: inline-block;
+        align-content: center;
+        margin-left: 6rem;
+        max-width: 60%;
+        line-height: 1.5rem;
+     }
+ 
+     hr{
+        border:0 ;
+        height:1.2px ;
+        background-color: #86861d ;
+        margin: 40px 84px;
+    }
+    .image{
+        display: inline;
+        margin-top: 12px;
+        height: 250px;
+        margin-left: 5rem;
+        
+    }
+    .footer {
+        position: relative;
+        width: 100%;
+        background: #081427;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .social-icon,
+      .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+      
+      .social-icon__item,
+      .menu__item {
+        list-style: none;
+      }
+      
+      .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .social-icon__link:hover {
+        transform: translateY(-10px);
+      }
+      
+      .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+      }
+      
+      .menu__link:hover {
+        opacity: 1;
+      }
+      
+      .social-icon_item{
+        color: black;
+      }
+
+        
