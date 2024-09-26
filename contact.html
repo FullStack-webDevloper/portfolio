@@ -54,7 +54,37 @@
   
       <script src="script.js"></script>
     </footer>
+ <!-- Include Ionicons -->
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+ <!-- Typed.js and custom script -->
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+ <script src="script.js"></script>
 
+ <!-- Include EmailJS -->
+ <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+ <script>
+     // Initialize EmailJS
+     (function() {
+         emailjs.init("8K_mThsleqDZ5qTBR"); // Replace with your EmailJS User ID
+     })();
+
+     // Handle form submission
+     document.getElementById('contact-form').addEventListener('submit', function(event) {
+         event.preventDefault(); // Prevent form from reloading the page
+
+         // Send the email using EmailJS
+         emailjs.sendForm('service_zjtydbt', 'template_oqfz9d9', this)
+             .then(function() {
+              // console.log('SUCCESS!', response.status, response.text);
+                 document.getElementById('response-message').innerText = 'Email sent successfully!';
+             }, function(error) {
+                 document.getElementById('response-message').innerText = 'Failed to send email. Please try again later.';
+                 console.error('Error:', error);
+             });
+     });
+ </script>
        
 </body>
 </html>
