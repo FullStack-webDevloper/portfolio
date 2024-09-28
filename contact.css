@@ -1,123 +1,191 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: rgb(12,36,49);
-    color: #ffffcc;
 
-    .poppins-thin {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-      }
-      
-      .poppins-bold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
-      
+body {
+  background-color: rgb(12, 36, 49);
+  color: #ffffcc;
+  font-family: "Poppins", sans-serif;
 }
+
+.poppins-thin {
+  font-weight: 100;
+}
+
+.poppins-bold {
+  font-weight: 700;
+}
+
 .contact-container {
-    margin-left: 2.2rem;
-    max-width: 600px;
-    margin: 6.25rem 6.25rem 8.75rem 25rem;
-    background: rgb(12,36,49);
-    padding: 1rem 2rem 1rem 3rem;
-    border-radius: 8px;;
+  margin: 6.25rem auto;
+  padding: 1rem 2rem;
+  background: rgb(12, 36, 49);
+  border-radius: 8px;
+  max-width: 100%;
+  width: 600px;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ffffcc;
-    border-radius: 5px;
-    font-size: 16px;
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffffcc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 button {
-    margin-left: 0.8rem;
-    width: 100%;
-    padding: 10px;
-    background-color: #86861d;
-    color: #ffffcc;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+  margin-left: 0.8rem;
+  width: 100%;
+  padding: 10px;
+  background-color: #86861d;
+  color: #ffffcc;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 #response-message {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #28a745;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #28a745;
 }
+
 .footer {
-    position: relative;
-    width: 100%;
-    background: #081427;
-    min-height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  background: #081427;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .contact-container {
+      width: 90%;
+      padding: 1rem;
+      margin: 6rem auto;
   }
-  
-  .social-icon,
-  .menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
+
+  h2 {
+      font-size: 1.8rem;
   }
-  
-  .social-icon__item,
-  .menu__item {
-    list-style: none;
+
+  input,
+  textarea {
+      font-size: 14px;
   }
-  
+
+  button {
+      font-size: 14px;
+  }
+
+  .footer {
+      padding: 10px 30px;
+  }
+
   .social-icon__link {
-    font-size: 2rem;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
+      font-size: 1.5rem;
   }
-  .social-icon__link:hover {
-    transform: translateY(-10px);
-  }
-  
+
   .menu__link {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-    text-decoration: none;
-    opacity: 0.75;
-    font-weight: 300;
+      font-size: 1rem;
   }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 5rem auto;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  input,
+  textarea {
+      font-size: 12px;
+  }
+
+  button {
+      font-size: 12px;
+  }
+
+  .footer {
+      padding: 10px 20px;
+  }
+
+  .social-icon__link {
+      font-size: 1.2rem;
+  }
+
+  .menu__link {
+      font-size: 0.9rem;
+  }
+}
