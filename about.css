@@ -115,7 +115,14 @@ hr {
 
   .image {
       height: 200px;
-      margin-left: 2rem;
+      margin-left: 8rem;
+      /* width: 100%;
+      border: 0.5px solid black;
+      border-radius: 5px; */
+      align-items: center;
+  }
+  .about-content{
+    margin-left: 4rem;
   }
 
   .footer {
@@ -149,7 +156,7 @@ hr {
 
   .image {
       height: 150px;
-      margin-left: .5rem;
+      margin-left: 5.3rem;
   }
 
   .footer {
