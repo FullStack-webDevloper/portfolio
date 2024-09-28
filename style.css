@@ -10,21 +10,13 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-.poppins-thin {
-    font-weight: 100;
-}
-
-.poppins-bold {
-    font-weight: 700;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 3rem;
-    background-color: #DCDCDC;
-    color: black;
+    background-color:  #081427;
+    color: white;
     position: fixed;
     width: 100%;
     top: 0;
@@ -38,13 +30,14 @@ nav ul {
 }
 
 nav ul li {
+  
     list-style: none;
     margin: 0 1rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
 }
 
 nav ul li a:hover {
@@ -56,6 +49,38 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 1.8rem;
+}
+
+/* Media Queries for Hamburger and Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #081427;;
+        width: 100%;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Other section styles remain the same */
 .firstSection {
     display: flex;
     justify-content: space-around;
@@ -155,63 +180,4 @@ main hr {
 
 .menu__link:hover {
     opacity: 1;
-}
-
-.social-icon_item {
-    color: black;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .firstSection {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .leftSection {
-        font-size: 2rem;
-    }
-
-    .SecondSection h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        padding: 0 0.5rem;
-    }
-
-    .left {
-        font-size: 1.2rem;
-    }
-
-    .firstSection {
-        margin: 5rem 0;
-    }
-
-    .leftSection {
-        font-size: 1.8rem;
-    }
-
-    .SecondSection h1 {
-        font-size: 2rem;
-    }
-
-    .footer {
-        padding: 10px 20px;
-    }
-
-    .social-icon__link {
-        font-size: 1.5rem;
-    }
-
-    .menu__link {
-        font-size: 1rem;
-    }
 }

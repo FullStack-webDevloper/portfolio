@@ -11,18 +11,22 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
     <header>
       <nav>
         <div class="left">Altamash's Portfolio</div>
         <div class="right">
-          <ul>
+          <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="https://github.com/FullStack-webDevloper">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
           </ul>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
         </div>
       </nav>
     </header>
@@ -34,49 +38,59 @@
           <span id="element"></span>
         </div>
         <div class="rightSection">
-          <img src="i.png" alt="" />
+          <img src="i.png" alt="Altamash Portfolio Image" />
         </div>
       </section>
       <hr>
       <section class="SecondSection">
         <h1>Objective</h1>
-        <div>As a passionate and detail-oriented web developer, I aim to create dynamic, user-centric web applications that drive business results and enhance user experiences. With strong expertise in front-end and back-end technologies, including React, Node.js, and MongoDB, I seek to collaborate with innovative teams to develop scalable solutions and optimize performance. My goal is to continuously improve through learning new technologies and delivering impactful web applications that align with modern design principles and business needs.</div>
-        <br>
-        <div>My goal is to work collaboratively within a forward-thinking team, where I can contribute to developing and maintaining high-quality code, optimizing performance, and ensuring that web applications are both responsive and accessible across various platforms and devices. I prioritize clean and maintainable code, as well as strong attention to design and user interface details to deliver products that meet modern web standards.</div>
-    </section>
-    <hr>
-    <footer class="footer">
-        </div>  
+        <div>As a passionate and detail-oriented web developer, I aim to create dynamic, user-centric web applications...</div>
+        <br />
+        <div>My goal is to work collaboratively within a forward-thinking team...</div>
+      </section>
+      <hr />
+      <footer class="footer">
         <ul class="social-icon">
-          <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/altamash-ahmad">
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="https://www.linkedin.com/in/altamash-ahmad">
               <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://x.com/Altamash730">
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="https://x.com/Altamash730">
               <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/FullStack-webDevloper">
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="https://github.com/FullStack-webDevloper">
               <ion-icon name="logo-GitHub"></ion-icon>
-            </a></li>
-        
+            </a>
+          </li>
         </ul>
         <ul class="menu">
           <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
           <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
           <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-    
         </ul>
-        <p>&copy;| All Rights Reserved</p>
+        <p>&copy; | All Rights Reserved</p>
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </main>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-    
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
         var typed = new Typed('#element', {
           strings: ['FullStack Web Developer', 'Mern Stack', 'DevOps'],
           typeSpeed: 40,
         });
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
       </script>
+    </main>
   </body>
 </html>
